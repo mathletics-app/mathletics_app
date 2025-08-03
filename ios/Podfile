@@ -10,16 +10,7 @@ project 'Runner', {
 }
 
 def flutter_root
-  generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'flutter_export_environment.sh'))
-  unless File.exist?(generated_xcode_build_settings_path)
-    puts "#{generated_xcode_build_settings_path} not found, running flutter pub get"
-    system('flutter pub get')
-  end
-  File.foreach(generated_xcode_build_settings_path) do |line|
-    matches = line.match(/FLUTTER_ROOT\=(.*)/)
-    return matches[1] if matches
-  end
-  raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}"
+  ENV['FLUTTER_ROOT'] || raise("FLUTTER_ROOT environment variable not set")
 end
 
 require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), flutter_root)
