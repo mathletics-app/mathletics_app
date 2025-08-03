@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "46001845449",
+    "firebase_url": "https://math-premium-app-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "math-premium-app",
+    "storage_bucket": "math-premium-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46001845449:android:a187212c26aae5b17ec918",
+        "android_client_info": {
+          "package_name": "com.leboneng.mathletics_v2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3Wl07041RZxEGbGRUKJ2YUaWt6BlZV5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

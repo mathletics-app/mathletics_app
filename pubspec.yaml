@@ -1,0 +1,58 @@
+name: mathletics_v2
+description: "A mathematics app for mastery."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.5
+  shared_preferences: ^2.5.0
+  page_transition: ^2.1.0
+  flutter_math_fork: ^0.7.4
+  fl_chart: ^1.0.0
+  math_expressions: ^3.0.0
+  function_tree: ^0.9.1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  intl: ^0.20.2
+  google_mobile_ads: ^6.0.0
+  connectivity_plus: ^6.0.3
+  url_launcher: ^6.1.7
+  firebase_core: ^3.15.0
+  firebase_auth: ^5.7.0
+  cloud_firestore: ^5.6.9
+  device_info_plus: ^11.5.0
+  http: ^1.2.1
+  ntp: ^2.0.0
+  flutter_native_splash: ^2.4.0
+  lottie: ^2.7.0
+  crypto: ^3.0.3
+  firebase_remote_config: ^5.5.0
+
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.14.4
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.5.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icon/main.png
+    - assets/lottie/dynamic.json
+
+flutter_launcher_icons:
+  image_path: "assets/icon/app_icon.png"
+  android: true
+  ios: true
+  remove_alpha_ios: true
+
