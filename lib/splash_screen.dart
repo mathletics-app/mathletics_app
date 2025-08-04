@@ -165,6 +165,7 @@ class _SplashScreenState extends State<SplashScreen> {
       } catch (e) {
         print("Mobile Ads initialization failed: $e");
       }
+    }
 
     stopwatch.stop();
     final elapsedMs = stopwatch.elapsedMilliseconds;
