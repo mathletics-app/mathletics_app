@@ -1,4 +1,4 @@
-package com.leboneng.mathletics_v2
+package com.leboneng.mathletics
 
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine

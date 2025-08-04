@@ -36,7 +36,7 @@ class _ModeSelectionScreen2State extends State<ModeSelectionScreen2> {
     if (!widget.isSubscriptionValid && (Platform.isAndroid || Platform.isIOS)) {
       _loadBannerAd();
       _loadInterstitialAd();
-      _interstitialTimer = Timer.periodic(const Duration(minutes: 2), (timer) {
+      _interstitialTimer = Timer.periodic(const Duration(minutes: 5), (timer) {
         _showInterstitialAd();
       });
     }
@@ -44,7 +44,7 @@ class _ModeSelectionScreen2State extends State<ModeSelectionScreen2> {
 
   void _loadBannerAd() {
     _bannerAd = BannerAd(
-      adUnitId: 'ca-app-pub-1183105543219757/2196119549',
+      adUnitId: 'ca-app-pub-1183105543219757/9343157418',
       request: const AdRequest(),
       size: AdSize.banner,
       listener: BannerAdListener(
@@ -60,7 +60,7 @@ class _ModeSelectionScreen2State extends State<ModeSelectionScreen2> {
 
   void _loadInterstitialAd() {
     InterstitialAd.load(
-      adUnitId: 'ca-app-pub-1183105543219757/9883037877',
+      adUnitId: 'ca-app-pub-1183105543219757/3244652925',
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {

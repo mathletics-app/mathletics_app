@@ -58,7 +58,7 @@
 
 	<!-- AdMob App ID placeholder - replace with your actual AdMob app ID -->
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-1183105543219757~9097619562</string>
+	<string>ca-app-pub-1183105543219757~3436224617</string>
 
 	<!-- App Tracking Transparency usage description -->
 	<key>NSUserTrackingUsageDescription</key>

@@ -8,7 +8,7 @@
 PRODUCT_NAME = mathletics_v2
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.mathleticsV2
+PRODUCT_BUNDLE_IDENTIFIER = com.leboneng.mathletics
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2025 com.example. All rights reserved.

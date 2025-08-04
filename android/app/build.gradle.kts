@@ -15,7 +15,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "com.leboneng.mathletics_v2"
+    namespace = "com.leboneng.mathletics"
     compileSdk = 35
     ndkVersion = "29.0.13846066"
 
@@ -29,7 +29,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.leboneng.mathletics_v2"
+        applicationId = "com.leboneng.mathletics"
         minSdk = 23
         targetSdk = 35
         versionCode = flutter.versionCode

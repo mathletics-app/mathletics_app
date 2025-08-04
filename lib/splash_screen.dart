@@ -1,4 +1,5 @@
 import 'dart:io' show Platform;
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'dart:convert';
 import 'package:lottie/lottie.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
@@ -50,6 +51,16 @@ class _SplashScreenState extends State<SplashScreen> {
     final hmacSha256 = Hmac(sha256, key);
     final digest = hmacSha256.convert(bytes);
     return digest.toString();
+  }
+
+  Future<void> requestTrackingPermission() async {
+    if (Platform.isIOS) {
+      final status = await AppTrackingTransparency.trackingAuthorizationStatus;
+      if (status == TrackingStatus.notDetermined) {
+        final result = await AppTrackingTransparency.requestTrackingAuthorization();
+        print("ATT permission status: $result");
+      }
+    }
   }
 
   Future<bool> _validatePremium() async {
@@ -148,10 +159,12 @@ class _SplashScreenState extends State<SplashScreen> {
       try {
         await MobileAds.instance.initialize();
         print("Mobile Ads initialized for FREE user");
+        if (Platform.isIOS) {
+          await requestTrackingPermission();
+        }
       } catch (e) {
         print("Mobile Ads initialization failed: $e");
       }
-    }
 
     stopwatch.stop();
     final elapsedMs = stopwatch.elapsedMilliseconds;

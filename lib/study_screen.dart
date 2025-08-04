@@ -17,9 +17,9 @@ class StudyScreen extends StatefulWidget {
 class _StudyScreenState extends State<StudyScreen> {
   final Map<String, Set<int>> shownExplanations = {};
   // Ad unit IDs
-  static const bannerAdUnitId = 'ca-app-pub-1183105543219757/2196119549';
-  static const interstitialAdUnitId = 'ca-app-pub-1183105543219757/9883037877';
-  static const rewardedAdUnitId = 'ca-app-pub-1183105543219757/3741135504';
+  static const bannerAdUnitId = 'ca-app-pub-1183105543219757/9343157418';
+  static const interstitialAdUnitId = 'ca-app-pub-1183105543219757/3244652925';
+  static const rewardedAdUnitId = 'ca-app-pub-1183105543219757/9482758214';
 
   final Map<String, List<Map<String, String>>> topics = studyQuestions;
   final Map<String, bool> topicExpanded = {};

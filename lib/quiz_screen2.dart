@@ -114,7 +114,7 @@ class _QuizScreenState extends State<QuizScreen2> {
   void _loadBannerAd() {
     if (widget.isSubscriptionValid) return;
     _bannerAd = BannerAd(
-      adUnitId: 'ca-app-pub-1183105543219757/2196119549',
+      adUnitId: 'ca-app-pub-1183105543219757/9343157418',
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(
@@ -137,7 +137,7 @@ class _QuizScreenState extends State<QuizScreen2> {
     if (widget.isSubscriptionValid || !(Platform.isAndroid || Platform.isIOS)) return;
 
     InterstitialAd.load(
-      adUnitId: 'ca-app-pub-1183105543219757/9883037877',
+      adUnitId: 'ca-app-pub-1183105543219757/3244652925',
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
