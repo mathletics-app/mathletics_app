@@ -5,19 +5,23 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
-      xcode_scheme: "Runner"
       vars:
-        BUNDLE_ID: "com.leboneng.mathletics"  # <-- change this to match your app
+        BUNDLE_ID: "com.leboneng.mathletics"
       groups:
-        - app_store_credentials   # <-- set these in Codemagic UI
-        - signing_credentials     # <-- set these in Codemagic UI
+        - firebase_config
+        - app_store_credentials
+        - signing_credentials
+    build:
+      ios:
+        xcode_scheme: Runner
+        export_method: app-store
     scripts:
       - name: Install dependencies
         script: |
           flutter pub get
-      - name: Build IPA
+      - name: Set up GoogleService-Info.plist
         script: |
-          flutter build ipa -t lib/main.dart  # <== using your actual entry point
+          echo $GOOGLESERVICE_INFO_PLIST | base64 --decode > ios/Runner/GoogleService-Info.plist
     artifacts:
       - build/ios/ipa/*.ipa
       - build/ios/ipa/*.dSYM.zip
@@ -25,4 +29,3 @@ workflows:
     publishing:
       app_store_connect:
         auth: integration
-        bundle_id: $BUNDLE_ID
