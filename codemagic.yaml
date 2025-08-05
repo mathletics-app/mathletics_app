@@ -26,4 +26,5 @@ workflows:
       - build/ios/ipa/*.dSYM.zip
       - flutter_drive.log
     publishing:
-      app_store_connect: {}
+      app_store_connect:
+        auth: integration
