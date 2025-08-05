@@ -26,5 +26,4 @@ workflows:
       - build/ios/ipa/*.dSYM.zip
       - flutter_drive.log
     publishing:
-      app_store_connect:
-      # no `auth:` here; setup via Codemagic UI integrations instead
+      app_store_connect: {}
