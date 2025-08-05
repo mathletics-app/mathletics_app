@@ -11,10 +11,6 @@ workflows:
         - firebase_config
         - app_store_credentials
         - signing_credentials
-    build:
-      ios:
-        xcode_scheme: Runner
-        export_method: app-store
     scripts:
       - name: Install dependencies
         script: |
@@ -22,10 +18,13 @@ workflows:
       - name: Set up GoogleService-Info.plist
         script: |
           echo $GOOGLESERVICE_INFO_PLIST | base64 --decode > ios/Runner/GoogleService-Info.plist
+      - name: Build IPA
+        script: |
+          flutter build ipa --flavor production -- -scheme Runner
     artifacts:
       - build/ios/ipa/*.ipa
       - build/ios/ipa/*.dSYM.zip
       - flutter_drive.log
     publishing:
       app_store_connect:
-        auth: integration
+      # no `auth:` here; setup via Codemagic UI integrations instead
