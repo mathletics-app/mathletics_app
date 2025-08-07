@@ -229,7 +229,7 @@ class MainMenuScreen extends StatelessWidget {
                   child: Image.asset('assets/icon/main.png'),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 23),
               const Text(
                 'Mathletics',
                 style: TextStyle(
@@ -258,14 +258,14 @@ class MainMenuScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 60),
+              const SizedBox(height: 105),
               SizedBox(
                 width: 220,
                 height: 75,
                 child: FilledButton(
                   style: FilledButton.styleFrom(
                     backgroundColor: const Color(0xFF1361BA),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
                   ),
                   onPressed: () => _navigateToCourseSelection(context),
                   child: const Padding(
