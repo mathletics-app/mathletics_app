@@ -1,8 +1,6 @@
 workflows:
   ios-release:
     name: iOS Release Build
-    integrations:
-      app_store_connect: true  # ✅ This enables the required integration
     environment:
       flutter: stable
       xcode: latest
@@ -29,4 +27,7 @@ workflows:
       - flutter_drive.log
     publishing:
       app_store_connect:
-        auth: integration  # ✅ Only valid if 'integrations' block is defined
+        auth:
+          api_key: $APP_STORE_CONNECT_API_KEY
+          key_id: $APP_STORE_CONNECT_KEY_ID
+          issuer_id: $APP_STORE_CONNECT_ISSUER_ID
